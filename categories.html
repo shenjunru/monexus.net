@@ -1,0 +1,18 @@
+---
+layout: index
+title:  Posts By Category
+group:  list
+---
+<h1>Categories</h1>
+<ul>
+  {% assign var_list = site.categories %}
+  {% include list/categories %}
+</ul>
+
+{% for item in site.categories %}
+  <h2 id="ref-{{ item[0] }}">{{ item[0] | join: "/" }}</h2>
+  <ul>
+    {% assign var_list = item[1] %}
+    {% include list/pages %}
+  </ul>
+{% endfor %}

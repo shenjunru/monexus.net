@@ -1,0 +1,16 @@
+{% if var_list.first[0] == null %}
+  {% for item in var_list %}
+    <li>
+      <a href="{{ BASE_PATH }}tags.html#ref-{{ item }}">{{ item }}</a>
+      <span>( {{ site.tags[item].size }} )</span>
+    </li>
+  {% endfor %}
+{% else %}
+  {% for item in var_list %}
+    <li>
+      <a href="{{ BASE_PATH }}tags.html#ref-{{ item[0] }}">{{ item[0] }}</a>
+      <span>( {{ item[1].size }} )</span>
+    </li>
+  {% endfor %}
+{% endif %}
+{% assign var_list = nil %}

@@ -1,0 +1,18 @@
+---
+layout: index
+title:  Posts By Tag
+group:  list
+---
+<h1>Tags</h1>
+<ul>
+  {% assign var_list = site.tags %}
+  {% include list/tags %}
+</ul>
+
+{% for item in site.tags %}
+  <h2 id="ref-{{ item[0] }}">{{ item[0] }}</h2>
+  <ul>
+    {% assign var_list = item[1] %}
+    {% include list/pages %}
+  </ul>
+{% endfor %}

@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<nav>
+  <ul>
+    <li class="tag-h1"><a href="#">{{ page.title }}</a></li>
+    {% for item in page.indexes %}
+    <li class="tag-h2"><a href="#{{ item[0] }}">{{ item[1] }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+<section>
+  {{ content }}
+</section>

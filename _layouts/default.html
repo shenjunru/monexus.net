@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="author" content="{{ site.author.name }}" />
+  <meta name="generator" content="Jekyll" />
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
+  {% for file in site.css %}<link rel="stylesheet" href="{{ file }}">{% endfor %}
+  {% for file in site.js %}<script src="{{ file }}"></script>{% endfor %}
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.tagline }}</p>
+  </header>
+
+  <div id="navbar">
+    <ul>
+      <li><a class="button" href="/">Home</a></li>
+      <li><a class="button" href="/javascript.html">JavaScript</a></li>
+      <li><a class="button" href="/life.html">Life</a></li>
+      <li><a class="button" href="/aboutme.html">About Me</a></li>
+    </ul>
+    <a id="github" href="{{ site.author.github }}" title="GitHub"></a>
+  </div>
+
+  <div class="wrapper">
+    {{ content }}
+
+    <footer>
+      {% for line in site.copyright %}
+      <p><small>{{ line }}</small></p>
+      {% endfor %}
+    </footer>
+  </div>
+</body>
+</html>

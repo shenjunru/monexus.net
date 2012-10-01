@@ -1,0 +1,8 @@
+<ul>
+  {% for item in var_list %}
+  <li>
+    <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+    <span>{{ item.description }}</span>
+  </li>
+  {% endfor %}
+</ul>

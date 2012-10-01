@@ -1,0 +1,35 @@
+auto:	     true
+markdown:    rdiscount
+pygments:    true
+paginate:    6
+permalink:   /:categories/:year/:month:day-:title.html
+exclude:     [ CNAME, README.md ]
+
+
+BASE_PATH:   false
+
+domain:      monexus.net
+url:         http://monexus.net
+feed:        /atom.xml
+title:       "monexus.net"
+tagline:     "Web driven by JavaScript"
+description: "monexus.net, Shen Junru's Blog, javascript, web develop"
+copyright:
+    - "&copy; 2012 Shen Junru"
+    - Hosted on GitHub Pages <br> Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a>
+
+author:
+    name:    Shen Junru
+    email:   shenjunru@gmail.com
+    github:  https://github.com/shenjunru
+
+css:
+    - /css/styles.css
+    - /css/pygment_trac.css
+
+js:
+    - http://code.jquery.com/jquery-1.7.1.min.js
+
+analytics:
+    google:
+        track-id:
